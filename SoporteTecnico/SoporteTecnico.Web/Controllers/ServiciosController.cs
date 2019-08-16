@@ -1,4 +1,4 @@
-﻿using SoporteTecnico.Web.Models;
+﻿using SoporteTecnico.BL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,26 +12,10 @@ namespace SoporteTecnico.Web.Controllers
         // GET: Servicios
         public ActionResult Index()
         {
-            var servicio1= new ProductoModel();
-            servicio1.Id = 1;
-            servicio1.Descripcion = "Instalación de Software";
-            
-            var servicio2 = new ProductoModel();
-            servicio2.Id = 2;
-            servicio2.Descripcion = "Mantenimiento Preventivo";
-
-            var servicio3 = new ProductoModel();
-            servicio3.Id = 3;
-            servicio3.Descripcion = "Taller de Reparación";
-
-
-            var listadeServicios = new List<ProductoModel>();
-            listadeServicios.Add(servicio1);
-            listadeServicios.Add(servicio2);
-            listadeServicios.Add(servicio3);
+            var serviciosBL = new ServiciosBL();
+            var listadeServicios = serviciosBL.ObtenerServicios();
 
             return View(listadeServicios);
-
         }
     }
 }
