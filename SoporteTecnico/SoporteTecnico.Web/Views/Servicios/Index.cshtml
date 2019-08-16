@@ -1,0 +1,12 @@
+﻿@model List<SoporteTecnico.Web.Models.ProductoModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Nuestros Servicios</h2>
+
+@foreach (var servicio in Model)
+{
+    <p>@servicio.Id</p>
+    <p>@servicio.Descripcion</p>
+}
