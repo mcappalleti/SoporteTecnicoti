@@ -14,8 +14,8 @@ namespace SoporteTecnico.Web.Controllers
         {
             var servicio1= new ProductoModel();
             servicio1.Id = 1;
-            servicio1.Descripcion = "Instalacion de Software";
-            servicio1.Precio = 500.00
+            servicio1.Descripcion = "Instalación de Software";
+            
             var servicio2 = new ProductoModel();
             servicio2.Id = 2;
             servicio2.Descripcion = "Mantenimiento Preventivo";
